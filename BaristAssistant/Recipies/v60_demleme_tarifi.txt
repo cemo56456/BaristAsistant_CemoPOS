@@ -1,0 +1,22 @@
+[Kategori] Kahve Demleme / Filtre Kahve
+[Yöntem] V60 Pour-Over (Akış Kanallı Demleme)
+[Zorluk Seviyesi] Orta
+[Hazırlık Süresi] 5 dakika
+
+[Malzemeler ve Ekipman]
+- Kahve Çekirdeği: 15 g (Orta-ince öğütülmüş, deniz tuzu kıvamında)
+- Su: 250 ml (92°C - 94°C sıcaklıkta, arıtılmış veya içme suyu)
+- Demleme Aparatı: Hario V60 dripper ve V60 kağıt filtresi
+- Ekipman: Hassas terazi, kronometre, kuğu boyunlu kettle (gooseneck)
+
+[Demleme Parametreleri]
+- Kahve-Su Oranı: 1:16.6
+- Hedef Toplam Demleme Süresi: 2 dakika 30 saniye - 3 dakika
+
+[Uygulama Adımları]
+1. Filtre Kağıdının Islatılması: Kağıt filtreyi V60 aparatına yerleştirin. Sıcak su dökerek kağıdı ıslatın ve bu suyu servis sürahisinden dökün (kağıt tadını engeller ve aparatı ısıtır).
+2. Kahvenin Eklenmesi: Islatılmış filtreye 15 g öğütülmüş kahveyi ekleyin. Teraziyi sıfırlayın.
+3. Ön Demleme (Blooming): 45 g sıcak suyu dairesel hareketlerle dökün. Kahve yatağının tamamen ıslandığından emin olun. Karbondioksit gazının salınımı için 30-40 saniye bekleyin.
+4. Birinci Döküş: Kronometre 0:40'ı gösterdiğinde, su miktarını merkezden dışa doğru spiral hareketlerle 150 g seviyesine getirin.
+5. İkinci Döküş: Kronometre 1:15 civarında suyun süzülmesini bekleyerek kalan suyu dökün ve toplam ağırlığı 250 g'a tamamlayın.
+6. Sonlandırma: Suyun tamamen süzülmesini (yaklaşık 2:30 - 2:45 dakika) bekleyin. Filtreyi çıkarın, sürahiyi sallayarak kahveyi homojen hale getirin ve servis edin.

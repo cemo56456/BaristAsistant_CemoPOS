@@ -1,0 +1,21 @@
+[Kategori] Kahve Hazırlama / Espresso ve Süt Tabanlı
+[Yöntem] Caffe Latte
+[Zorluk Seviyesi] Orta
+[Hazırlık Süresi] 4 dakika
+
+[Malzemeler ve Ekipman]
+- Kahve Çekirdeği: 18 g (İnce espresso öğütümü)
+- Espresso: Double shot (Yaklaşık 36 g sıvı)
+- Süt: 200 ml - 220 ml (Soğuk, tam yağlı süt tercih edilir)
+- Ekipman: Espresso makinesi, buhar çubuğu, süt potu (pitcher), latte bardağı (yaklaşık 300 ml kapasiteli)
+
+[Demleme Parametreleri]
+- Mikro Köpük Kalınlığı: Yaklaşık 1 cm
+- Süt Sıcaklığı: 60°C - 65°C (Sütün tatlılığını korumak için 70°C aşılmamalıdır)
+
+[Uygulama Adımları]
+1. Espresso Hazırlığı: Portafiltreye 18 g kahveyi ekleyin, tampleyin ve latte bardağının içine doğrudan çift shot (36 g) espresso demleyin.
+2. Süt Köpürtme: Süt potuna 200 ml soğuk süt ekleyin. Buhar çubuğunu sütün yüzeyinin hemen altına (yaklaşık 1 cm) yerleştirin. Buharı açarak sütün içine hava girmesini sağlayın (hissedilir bir tıslama sesi duyulmalıdır).
+3. Isıtma: Süt hacmi yaklaşık %10-15 oranında arttığında, buhar çubuğunu biraz daha derine daldırarak sütü girdap (girdap hareketi) şeklinde döndürün. Süt potu ele tutulamayacak sıcaklığa geldiğinde (60°C - 65°C) buharı kapatın.
+4. Sütü Homojenleştirme: Süt potunu tezgaha hafifçe vurarak büyük kabarcıkları yok edin ve dairesel hareketlerle sallayarak parlak, pürüzsüz bir mikro köpük elde edin.
+5. Birleştirme: Hazırlanan sütü, bardağın ortasından espressonun üzerine dairesel ve sabit bir akışla dökün. Son aşamada potu bardağa yaklaştırarak yüzeyde hafif bir köpük tabakası oluşturun.

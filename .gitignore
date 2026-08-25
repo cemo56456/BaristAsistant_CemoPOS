@@ -1,0 +1,14 @@
+# Node / Frontend
+node_modules/
+dist/
+build/
+.env
+
+# Python / Agent
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# VS Code
+.vscode/

@@ -1,0 +1,23 @@
+[Kategori] Kahve Hazırlama / Basınçlı Demleme
+[Yöntem] Espresso (Single / Double Shot)
+[Zorluk Seviyesi] Zor
+[Hazırlık Süresi] 2 dakika
+
+[Malzemeler ve Ekipman]
+- Kahve Çekirdeği: 18 g (Çok ince öğütülmüş, pudra şekerinden biraz kalın)
+- Su: Makineden gelen ideal basınçlı su (90°C - 93°C)
+- Ekipman: Espresso makinesi, portafiltre (double sepet), tamper, hassas terazi, kronometre
+
+[Demleme Parametreleri]
+- Kahve Girdisi: 18 g (Double shot için)
+- Likit Çıktısı: 36 g - 40 g
+- Ekstraksiyon Süresi: 25 - 30 saniye
+- Pompa Basıncı: 9 Bar
+
+[Uygulama Adımları]
+1. Sepet Hazırlığı: Portafiltre sepetinin tamamen temiz ve kuru olduğundan emin olun.
+2. Dozajlama: Sepete tam 18 g ince öğütülmüş kahve çekin. Kanallanmayı önlemek için kahve yatağını düzleştirin (WDT aracı kullanılabilir).
+3. Sıkıştırma (Tamping): Tamper ile kahve yatağına dik, düz ve yaklaşık 15 kg kuvvet uygulayarak pürüzsüz bir yüzey elde edin.
+4. Grup Başlığı Temizliği: Portafiltreyi takmadan önce grup başlığından kısa süreli sıcak su akıtın (flush).
+5. Demleme ve Akış: Portafiltreyi gruba sıkıca kilitleyin. Altına fincanı yerleştirip teraziyi sıfırlayın. Akış düğmesine basıp kronometreyi başlatın.
+6. Hedef Çıktı: Yaklaşık 25-30 saniyede tartıda 36 g ila 40 g arasında espresso çıktısı gördüğünüzde akışı durdurun. Üzerinde kalın, elastik ve altın sarısı-kahverengi bir krema (crema) tabakası olmalıdır.

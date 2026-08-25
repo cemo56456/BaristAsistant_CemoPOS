@@ -1,0 +1,20 @@
+[Kategori] Kahve Hazırlama / Espresso Tabanlı
+[Yöntem] Caffe Americano
+[Zorluk Seviyesi] Kolay
+[Hazırlık Süresi] 3 dakika
+
+[Malzemeler ve Ekipman]
+- Kahve Çekirdeği: 18 g (İnce espresso öğütümü)
+- Espresso: 2 shot (Yaklaşık 36 g - 40 g sıvı espresso çıktısı)
+- Sıcak Su: 120 ml - 150 ml (85°C - 90°C sıcaklıkta)
+- Ekipman: Espresso makinesi, espresso bardağı, servis bardağı (yaklaşık 200 ml kapasiteli)
+
+[Demleme Parametreleri]
+- Espresso Çıktı Oranı: 1:2 (18 g kahveden 36 g espresso elde edilir)
+- Espresso Akış Süresi: 25 - 30 saniye
+
+[Uygulama Adımları]
+1. Espresso Hazırlığı: Portafiltreye 18 g ince öğütülmüş kahveyi koyun, düzleştirin ve tampleyin (sıkıştırın). Espresso makinesinden çift shot (double shot) espresso akışını başlatın ve 36-40 g sıvı elde edene kadar (yaklaşık 25-30 saniye) demleyin.
+2. Su Hazırlığı: Servis bardağına 120 ml ila 150 ml arasında 85°C - 90°C sıcaklığında su koyun. (Sıcaklık derecesi kahvenin yanmasını önlemek için önemlidir).
+3. Birleştirme: Taze demlenmiş çift shot espressoyu, bardağa doldurduğunuz sıcak suyun üzerine yavaşça dökün. 
+   - Not: Önce suyun, ardından espresso eklenmesi kahvenin üzerindeki krema (crema) tabakasını korur ve daha yumuşak bir içim sunar.
