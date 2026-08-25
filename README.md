@@ -1,54 +1,54 @@
 # BaristAssistant & CemoPOS ☕🤖
 
-BaristAssistant & CemoPOS, kahve dükkanı operasyonları ve sipariş yönetimini kolaylaştırmak amacıyla geliştirilmiş modern bir Satış Noktası (POS) arayüzü ile yerel yapay zeka tabanlı baristalık asistanı modülünü bir araya getiren entegre bir sistemdir.
+BaristAssistant & CemoPOS is an integrated coffee shop management platform combining a modern Point of Sale (POS) interface with a local AI-powered barista assistant module to streamline order taking and cafe workflows.
 
 ---
 
-## 🚀 Temel Özellikler
+## 🚀 Key Features
 
-- **POS Yönetimi (CemoPOS):** Hızlı ürün seçimi, sipariş oluşturma, adisyon takibi ve operasyonel iş akışı.
-- **BaristAssistant (AI Modülü):** Kahve demleme reçeteleri, çekirdek profilleri, operasyonel sorular ve parametreler için yerel yapay zeka destekli akıllı sohbet/destek asistanı.
-- **Modüler Mimari:** Kullanıcı arayüzü (`app`) ile arka planda çalışan zeka/servis katmanının (`agent`) bağımsız ve entegre çalışabilirliği.
+- **POS Operations (CemoPOS):** Fast item selection, order processing, ticket management, and operational workflow tracking.
+- **BaristAssistant (AI Module):** Local AI conversational agent for brewing recipes, bean roast profiles, operational parameters, and equipment troubleshooting.
+- **Modular Monorepo Architecture:** Clean separation between the frontend interface (`app`) and the backend intelligence layer (`agent`).
 
 ---
 
-## 🏗️ Proje Mimarisi
+## 🏗️ Project Structure
 
 ```text
 BaristAsistant_CemoPOS/
-├── app/                    # POS Arayüzü ve Ön Yüz Uygulaması
+├── app/                    # POS Frontend UI (React / TypeScript)
 │   ├── src/
 │   └── package.json
-├── agent/                  # BaristAssistant AI / Backend Servisi
+├── agent/                  # BaristAssistant AI / Backend Service (Python / Local LLM)
 │   ├── config/
-│   └── main.py / app.py
+│   └── main.py
 ├── .gitignore
 └── README.md
 ```
 
 ---
 
-## 🛠️ Teknolojiler ve Gereksinimler
+## 🛠️ Tech Stack & Prerequisites
 
-- **Ön Yüz / POS:** React / TypeScript, Modern UI kütüphaneleri
-- **Asistan / Backend:** Python / Yerel LLM Entegrasyonu (Ollama, ChromaDB / RAG altyapısı)
-- **Paket Yöneticileri:** Node.js (npm / yarn), Python (pip / venv)
+- **Frontend / POS:** React, TypeScript, Vite / Modern UI Kit
+- **Agent / Backend:** Python 3.10+, Local LLM Integration (Ollama / ChromaDB RAG pipeline)
+- **Package Managers:** Node.js (`npm` or `yarn`), Python (`pip` / `venv`)
 
 ---
 
-## ⚙️ Kurulum ve Çalıştırma
+## ⚙️ Getting Started
 
-### 1. Depoyu Klonlayın
+### 1. Clone the Repository
 ```bash
 git clone [https://github.com/cemo56456/BaristAsistant_CemoPOS.git](https://github.com/cemo56456/BaristAsistant_CemoPOS.git)
 cd BaristAsistant_CemoPOS
 ```
 
-### 2. AI Asistanı / Backend Servisini Başlatma
+### 2. Start the AI Assistant / Backend Service
 ```bash
 cd agent
 
-# Sanal ortam oluşturma ve aktif etme
+# Create and activate virtual environment
 python -m venv venv
 
 # Windows:
@@ -56,15 +56,15 @@ python -m venv venv
 # macOS/Linux:
 # source venv/bin/activate
 
-# Gerekli bağımlılıkları yükleyin
+# Install dependencies
 pip install -r requirements.txt
 
-# Servisi başlatın
+# Run the agent service
 python main.py
 ```
 
-### 3. POS Uygulamasını Başlatma
-Yeni bir terminal sekmesinde:
+### 3. Start the POS Application
+Open a new terminal session:
 ```bash
 cd app
 npm install
@@ -73,12 +73,12 @@ npm run dev
 
 ---
 
-## 📌 Kullanım Senaryoları
+## 📌 Use Cases
 
-1. **Sipariş Girişi:** POS ekranı üzerinden ürünleri sepete ekleyin ve sipariş akışını tamamlayın.
-2. **Asistan Danışma:** Entegre BaristAssistant paneli üzerinden demleme oranları, çekirdek kavurma profilleri ve ekipman kalibrasyonları hakkında anlık bilgi alın.
+1. **Order Processing:** Use the POS interface to add items, customize options, and complete customer orders.
+2. **AI Barista Guidance:** Consult the embedded BaristAssistant for real-time extraction ratios, grind adjustments, and bean origin details.
 
 ---
 
-## 🔒 Lisans ve Gizlilik
-Bu proje özel mülkiyete tabidir. İzinsiz kopyalanamaz veya dağıtılamaz.
+## 🔒 License
+Proprietary and confidential. Unauthorized copying, distribution, or modification is strictly prohibited.
