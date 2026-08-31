@@ -31,6 +31,8 @@ function App() {
   const [chatMessages, setChatMessages] = useState<{ role: "user" | "assistant"; text: string }[]>([]);
   const [chatLoading, setChatLoading] = useState(false);
 
+  const [paymentMessage, setPaymentMessage] = useState<string | null>(null);
+
   async function sendChatMessage() {
     if (!chatInput.trim()) return;
 
@@ -91,157 +93,115 @@ function App() {
   const total = currentCart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   return (
-    <div style={{ padding: "20px", fontFamily: "sans-serif" }}>
-      <h1>*CEMOPOS*</h1>
+    <div className="app-container">
+      <header className="app-header">
+        <div className="brand">CEMO POS</div>
+      </header>
 
-      <h2>Masalar</h2>
-      <div style={{ display: "flex", gap: "10px", marginBottom: "20px" }}>
-        {TABLES.map((table) => (
-          <button
-            key={table}
-            onClick={() => selectTable(table)}
-            style={{
-              padding: "10px 20px",
-              backgroundColor: selectedTable === table ? "#4CAF50" : "#ddd",
-              color: selectedTable === table ? "white" : "black",
-              border: "none",
-              borderRadius: "5px",
-              cursor: "pointer",
-            }}
-          >
-            Masa {table}
-          </button>
-        ))}
-      </div>
-
-      {selectedTable !== null && (
-        <>
-          <h2>Masa {selectedTable} - Ürün Ekle</h2>
-          <div style={{ display: "flex", gap: "10px", marginBottom: "20px", flexWrap: "wrap" }}>
-            {PRODUCTS.map((product) => (
+      <div className="main">
+        <aside className="sidebar">
+          <h2>Masalar</h2>
+          <div className="tables">
+            {TABLES.map((table) => (
               <button
-                key={product.id}
-                onClick={() => addProduct(product.id)}
-                style={{
-                  padding: "10px 15px",
-                  backgroundColor: "#2196F3",
-                  color: "white",
-                  border: "none",
-                  borderRadius: "5px",
-                  cursor: "pointer",
-                }}
+                key={table}
+                onClick={() => selectTable(table)}
+                className={`table-chip ${selectedTable === table ? "active" : ""}`}
               >
-                {product.name} - {product.price}₺
+                Masa {table}
               </button>
             ))}
           </div>
 
+          {selectedTable !== null && (
+            <div className="products-section">
+              <h3>Masa {selectedTable} - Ürün Ekle</h3>
+              <div className="products-grid">
+                {PRODUCTS.map((product) => (
+                  <div key={product.id} className="product-card">
+                    <div className="product-info">
+                      <div className="product-name">{product.name}</div>
+                      <div className="product-price">{product.price}₺</div>
+                    </div>
+                    <button className="product-btn" onClick={() => addProduct(product.id)}>
+                      Ekle
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </aside>
+
+        <section className="cart">
           <h2>Sepet</h2>
+          {paymentMessage && <div className="toast">{paymentMessage}</div>}
           {currentCart.length === 0 ? (
-            <p>Sepet boş.</p>
+            <div className="empty">Sepet boş.</div>
           ) : (
-            <ul>
+            <ul className="cart-list">
               {currentCart.map((item) => (
-                <li key={item.productId}>
-                  {item.name} x{item.quantity} - {item.price * item.quantity}₺
+                <li key={item.productId} className="cart-item">
+                  <div>
+                    <div className="item-name">{item.name}</div>
+                    <div className="item-qty">x{item.quantity}</div>
+                  </div>
+                  <div className="item-price">{item.price * item.quantity}₺</div>
                 </li>
               ))}
             </ul>
           )}
 
-          <h3>Toplam: {total}₺</h3>
-        </>
-      )}
-      {/* Barista Asistanı - sağ alt köşede sabit buton */}
-  <button
-    onClick={() => setChatOpen(!chatOpen)}
-    style={{
-      position: "fixed",
-      bottom: "20px",
-      right: "20px",
-      width: "60px",
-      height: "60px",
-      borderRadius: "50%",
-      backgroundColor: "#FF6F00",
-      color: "white",
-      border: "none",
-      fontSize: "24px",
-      cursor: "pointer",
-      boxShadow: "0 2px 8px rgba(0,0,0,0.3)",
-    }}
-  >
-    ☕
-  </button>
-
-  {chatOpen && (
-    <div
-      style={{
-        position: "fixed",
-        bottom: "90px",
-        right: "20px",
-        width: "320px",
-        height: "400px",
-        backgroundColor: "white",
-        border: "1px solid #ccc",
-        borderRadius: "10px",
-        boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
-        display: "flex",
-        flexDirection: "column",
-        overflow: "hidden",
-      }}
-    >
-      <div style={{ backgroundColor: "#FF6F00", color: "white", padding: "10px", fontWeight: "bold" }}>
-        BaristAssistant
-      </div>
-
-      <div style={{ flex: 1, overflowY: "auto", padding: "10px" }}>
-        {chatMessages.map((msg, i) => (
-          <div
-            key={i}
-            style={{
-              marginBottom: "8px",
-              textAlign: msg.role === "user" ? "right" : "left",
-            }}
-          >
-            <span
-              style={{
-                display: "inline-block",
-                padding: "6px 10px",
-                borderRadius: "8px",
-                backgroundColor: msg.role === "user" ? "#2196F3" : "#eee",
-                color: msg.role === "user" ? "white" : "black",
-                maxWidth: "80%",
-              }}
-            >
-              {msg.text}
-            </span>
+          <div className="cart-footer">
+            <div className="total">Toplam: <span className="total-amount">{total}₺</span></div>
+            <div>
+            <button className="button-secondary" onClick={() => {
+              if (selectedTable === null) return;
+              setTableCarts(prev => ({ ...prev, [selectedTable]: [] }));
+              setSelectedTable(null);
+              setPaymentMessage("İşlem iptal edildi.");
+              setTimeout(() => setPaymentMessage(null), 2000);
+            }}>İptal</button>
+            <button className="button-primary" onClick={() => {
+              if (selectedTable === null) return;
+              // Simulate successful payment
+              setTableCarts(prev => ({ ...prev, [selectedTable]: [] }));
+              setSelectedTable(null);
+              setPaymentMessage("Ödeme başarılı.");
+              setTimeout(() => setPaymentMessage(null), 2000);
+            }}>Öde</button>
           </div>
-        ))}
-        {chatLoading && <p style={{ fontStyle: "italic", color: "#888" }}>Bir düşüneyim...</p>}
+          </div>
+        </section>
       </div>
 
-      <div style={{ display: "flex", borderTop: "1px solid #ccc" }}>
-              <style>{`
-                .barista-chat-input::placeholder {
-                  color: #555 !important;
-                  opacity: 1 !important;
-                  font-weight: 500;
-                }
-              `}</style>
-              <input
-                className="barista-chat-input"
-                value={chatInput}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setChatInput(e.target.value)}
-                onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => e.key === "Enter" && sendChatMessage()}
-                placeholder="Sor bakalım Barista..."
-                style={{ flex: 1, border: "none", padding: "10px", color: "#222" }}
-              />
-        <button onClick={sendChatMessage} style={{ border: "none", backgroundColor: "#FF6F00", color: "white", padding: "0 15px" }}>
-          Gönder
-        </button>
-      </div>
-    </div>
-  )}
+      <button className="fab" onClick={() => setChatOpen(!chatOpen)}>☕</button>
+
+      {chatOpen && (
+        <div className="chat-panel">
+          <div className="chat-header">BaristAssistant</div>
+
+          <div className="chat-messages">
+            {chatMessages.map((msg, i) => (
+              <div key={i} className={`chat-bubble ${msg.role === "user" ? "user" : "assistant"}`}>
+                {msg.text}
+              </div>
+            ))}
+            {chatLoading && <div className="chat-loading">Bir düşüneyim...</div>}
+          </div>
+
+          <div className="chat-input-area">
+            <input
+              className="barista-chat-input"
+              value={chatInput}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setChatInput(e.target.value)}
+              onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => e.key === "Enter" && sendChatMessage()}
+              placeholder="Sor bakalım Barista..."
+            />
+            <button className="button-primary" onClick={sendChatMessage}>Gönder</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
